@@ -1,0 +1,207 @@
+@import '_fonts.scss';
+@import '_need.scss';
+
+.product-item {
+    min-height: 65.5px;
+    padding: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    border-bottom: 1px solid #848484;
+
+    &:last-child{
+        border: none;
+    }
+}
+
+.product-item:last-child {
+    margin-right: 0;
+}
+
+.product-item .product-body {
+    cursor: pointer;
+    display: flex;
+}
+
+.product-item .product-body img{
+    margin-right: 35px;
+}
+
+.product-item .product-body .text {
+    width: 100%;
+    margin: 0 5% 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.product-item .product-body .product-title {
+    margin-bottom: 1px;
+    padding: 0;
+    @include txt($c1, 23px, 18px, H400);
+    text-align: left;
+    width: 100%;
+}
+
+.product-item .product-body .product-desc {
+    @include txt($c1, 19px, 16px, H300);
+    text-align: left;
+    width: 100%;
+}
+
+.product-item .product-footer {
+    padding: 20px 5px 5px;
+    width: 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #000;
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.product-item .product-footer .product-price {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.product-item .product-footer .product-price .new-price,
+.product-item .product-footer .product-price .new-price-orange,
+.product-item .product-footer .product-price .old-price {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.product-item .product-footer .product-price .new-price{
+    display: flex;
+    flex-direction: row;
+    @include txt($c1, 24px, 20px, H300);
+}
+
+.product-item .product-footer .product-price .new-price .price{
+    margin-right: 5px;
+    font-size: 24px;
+}
+
+.product-item .product-footer .product-price .new-price span.rub,
+.product-item .product-footer .product-price .new-price-orange span.rub,
+.product-item .product-footer .product-price .old-price span.rub {
+    font-size: 24px;
+}
+
+.product-item .product-footer .product-price .old-price {
+    color: #666;
+    margin-left: 10px;
+    font-size: 15px;
+    text-decoration: line-through;
+    position: relative;
+}
+
+.product-item .product-footer .product-price .new-price-orange {
+    color: #ff6340;
+}
+
+.product-item .product-footer .counts {
+    width: 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.product-item .product-footer .counts .count {
+    @include txt($c1, 24px, 20px, H300);
+}
+
+.product-item .product-footer .counts .minus-btn,
+.product-item .product-footer .counts .plus-btn,
+.product-item .product-footer .basket .order-sheet_list .order-sheet_item .item_number .counts .plus-btn,
+.basket .order-sheet_list .order-sheet_item .item_number .product-item .product-footer .counts .plus-btn,
+.product-item .product-footer .modal .modal-content .right .price .counts .plus-btn,
+.modal .modal-content .right .price .product-item .product-footer .counts .plus-btn {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    border: none;
+    position: relative;
+    background-color: inherit;
+    outline: none;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.product-item .product-footer .counts .minus-btn:hover,
+.product-item .product-footer .counts .plus-btn:hover,
+.product-item .product-footer .basket .order-sheet_list .order-sheet_item .item_number .counts .plus-btn:hover,
+.basket .order-sheet_list .order-sheet_item .item_number .product-item .product-footer .counts .plus-btn:hover,
+.product-item .product-footer .modal .modal-content .right .price .counts .plus-btn:hover,
+.modal .modal-content .right .price .product-item .product-footer .counts .plus-btn:hover,
+.product-item .product-footer .counts .minus-btn:focus,
+.product-item .product-footer .counts .plus-btn:focus,
+.product-item .product-footer .basket .order-sheet_list .order-sheet_item .item_number .counts .plus-btn:focus,
+.basket .order-sheet_list .order-sheet_item .item_number .product-item .product-footer .counts .plus-btn:focus,
+.product-item .product-footer .modal .modal-content .right .price .counts .plus-btn:focus,
+.modal .modal-content .right .price .product-item .product-footer .counts .plus-btn:focus {
+    color: #ff6340;
+}
+
+.product-item .product-footer .counts .minus-btn::before,
+.product-item .product-footer .counts .plus-btn::before,
+.product-item .product-footer .basket .order-sheet_list .order-sheet_item .item_number .counts .plus-btn::before,
+.basket .order-sheet_list .order-sheet_item .item_number .product-item .product-footer .counts .plus-btn::before,
+.product-item .product-footer .modal .modal-content .right .price .counts .plus-btn::before,
+.modal .modal-content .right .price .product-item .product-footer .counts .plus-btn::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    border-radius: 4px;
+    background-color: currentColor;
+    position: absolute;
+    top: 47%;
+}
+
+.product-item .product-footer .counts .plus-btn::after {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 100%;
+    border-radius: 4px;
+    background-color: currentColor;
+    position: relative;
+    left: 44%;
+}
+
+.not-active {
+    background-color: #ccc;
+}

@@ -1,0 +1,18 @@
+@import '_fonts.scss';
+
+@mixin txt ($color, $line-height, $font-size, $font-family) {
+    color: $color;
+    line-height: $line-height;
+    font-size: $font-size;
+    font-family: $font-family;
+}
+
+//size
+$w: 100%;
+//color
+$c1: #000;
+$c2: #FF2727;
+$c3: #848484;
+$c4: #fff;
+$c5: #F11F3E;
+$c6: #E0112F;

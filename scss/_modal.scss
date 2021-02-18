@@ -1,0 +1,167 @@
+.modal {
+    z-index: 3;
+    left: 0%;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #0007;
+    position: fixed;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.recaptcha-widget {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.older-price {
+    color: #666;
+    margin-right: 10px;
+    font-size: 15px;
+    text-decoration: line-through;
+    position: relative;
+}
+
+.modal .modal-content {
+    padding: 25px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #fefefe;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal .modal-content .close {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    font-size: 40px;
+    color: #555;
+}
+
+.modal .modal-content .left img {
+    width: 100%;
+    display: block;
+    transform: scale(2);
+}
+
+.modal .modal-content .right {
+    width: 50%;
+    padding: 45px 0;
+}
+
+.modal .modal-content .right h3 {
+    font-size: 25px;
+}
+
+.modal .modal-content .right .desc {
+    margin-top: 20px;
+    color: #444;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.modal .modal-content .right .price {
+    margin-top: 30px;
+    padding: 20px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: 500;
+    border-top: 1px solid #ccc9;
+    border-bottom: 1px solid #ccc9;
+}
+
+.modal .modal-content .right .price .rub {
+    font-size: 0.8em;
+}
+
+.modal .modal-content .right .price .counts {
+    width: 30%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.modal .modal-content .right .price .counts .minus-btn,
+.modal .modal-content .right .price .counts .plus-btn {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    border: none;
+    position: relative;
+    background-color: inherit;
+    outline: none;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.modal .modal-content .right .price .counts .minus-btn:hover,
+.modal .modal-content .right .price .counts .plus-btn:hover,
+.modal .modal-content .right .price .counts .minus-btn:focus,
+.modal .modal-content .right .price .counts .plus-btn:focus {
+    color: #ff6340;
+}
+
+.modal .modal-content .right .price .counts .minus-btn::before,
+.modal .modal-content .right .price .counts .plus-btn::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    border-radius: 4px;
+    background-color: currentColor;
+    position: absolute;
+    top: 47%;
+}
+
+.modal .modal-content .right .price .counts .plus-btn::after {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 100%;
+    border-radius: 4px;
+    background-color: currentColor;
+    position: relative;
+    left: 44%;
+}
+
+.modal .modal-content .right .socials {
+    margin-top: 25px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+
+.modal .modal-content .right .socials .social {
+    margin-left: 15px;
+    font-size: 23px;
+}
+
+.modal .close {
+    color: #000;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}

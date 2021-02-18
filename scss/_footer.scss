@@ -1,0 +1,27 @@
+@import '_need.scss';
+
+.footer {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+        margin: 0 0 0 67px;
+    }
+
+    .text {
+        width: 43%;
+        @include txt($c1, 19px, 14px, H300);
+    }
+
+    .social {
+        display: flex;
+        align-items: center;
+
+        .ico-inst {
+            margin: 0 0 0 18px;
+        }
+    }
+}

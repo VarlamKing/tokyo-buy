@@ -1,0 +1,140 @@
+@import '_need.scss';
+
+.header {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo-a {
+        text-decoration: none;
+    }
+
+    .logo {
+        margin: 0 2.16% 0 0;
+    }
+
+    #burger-menu {
+        display: none;
+    }
+
+    .open {
+        display: none;
+    }
+
+    .nav {
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        &-logo {
+            display: none;
+        }
+
+        .close {
+            display: none;
+        }
+
+        .contacts {
+            width: 200px;
+            margin: 0 11.32% 0 0;
+
+            &-tel {
+                @include txt($c1, 22px, 16px, H400);
+                display: block;
+                margin: 0 0 3px 0;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+
+                &:active {
+                    text-decoration: none;
+                }
+            }
+
+            &-red {
+                @include txt($c2, 19px, 14px, H300);
+            }
+        }
+
+        &-list {
+            width: 379px;
+            margin-left: -30%;
+            list-style-type: none;
+            display: flex;
+            justify-content: space-between;
+
+            &-item {
+                // margin: 0 0 0 6.25%;
+
+                &-link {
+                    @include txt($c1, 22px, 16px, H400);
+                    display: block;
+                    text-decoration: none;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+
+                    &:active {
+                        text-decoration: none;
+                    }
+                }
+
+                // &:first-child {
+                //     margin: 0;
+                // }
+            }
+        }
+    }
+
+    .basket {
+        display: flex;
+        align-items: center;
+
+        &-content {
+            margin: 0 20px 0 0;
+
+            &-price {
+                @include txt($c1, 22px, 16px, H400);
+                display: block;
+            }
+
+            &-quantity {
+                @include txt($c2, 19px, 14px, H400);
+            }
+        }
+
+        &-btn {
+            @include txt($c4, 22px, 16px, H400);
+            background-color: $c2;
+            border: none;
+            border-radius: 51.5px;
+            padding: 9px 15px;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+
+            &:focus,
+            &:active {
+                outline: none;
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            &::before {
+                content: url(../img/bin.svg);
+                margin: 0 8px 0 0;
+            }
+        }
+    }
+
+    .basket-mob {
+        display: none;
+    }
+}
